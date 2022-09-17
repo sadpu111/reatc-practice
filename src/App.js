@@ -18,6 +18,7 @@ function App() {
 
   return (
   <div>
+    <h1>My Todos ({todos.length})</h1>
     <form onSubmit={onSubmit}>
       <input 
         onChange={onChange} 
@@ -29,6 +30,8 @@ function App() {
         Add to Todos
       </button>
     </form>
+    <hr />
+    {todos.map((item) => <li key={item.id}>{item}</li>)}
   </div>
   );
   }
